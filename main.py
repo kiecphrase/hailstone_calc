@@ -2,6 +2,7 @@ x = int(input('Give an integer greater than 0: '))
 print('calculating the hailstone series for all numbers up to and including', x)
 
 y = 1
+a = [0,0]
 
 # go through every number
 while y <= x:
@@ -37,8 +38,18 @@ while y <= x:
     print('all significant number in series: ', series)
     print(' ')
 
+    if a[0] < biggest:
+        a[0] = biggest
+        a[1] = y
+
     # move to next number
     y = y + 1
 
-
+print('')
+print('')
+print('')
+print('largest number reached in a series: ', a[0])
+print('starting number in which that number occurred first: ', a[1])
+print('')
+print('')
 input('press enter to exit')
